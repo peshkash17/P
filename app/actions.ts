@@ -35,7 +35,7 @@ export const signUpAction = async (formData: FormData) => {
       email,
       password,
       options: {
-        emailRedirectTo: `https://lawspeak.ai/auth/callback`,
+        emailRedirectTo: `http://localhost:3000/auth/callback`,
       },
     });
 
@@ -115,7 +115,7 @@ export const forgotPasswordAction = async (formData: FormData) => {
 
 
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `https://lawspeak.ai/auth/callback?redirect_to=protected/reset-password`,
+    redirectTo: `http://localhost:3000/auth/callback?redirect_to=protected/reset-password`,
   });
 
   if (error) {

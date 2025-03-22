@@ -16,9 +16,9 @@ export async function GET(request: Request) {
   }
 
   if (redirectTo) {
-    return NextResponse.redirect(`https://lawspeak.ai/${redirectTo}`);
+    return NextResponse.redirect(`http://localhost:3000/${redirectTo}`);
   }
 
   // URL to redirect to after sign up process completes
-  return NextResponse.redirect(`https://lawspeak.ai/dashboard`);
+  return NextResponse.redirect(`http://localhost:3000/dashboard`);
 }
